@@ -166,13 +166,16 @@
         class="form-select"
       >
         <option selected value="">Open this select Action</option>
-        {#each options_call as option}
-          {#if sectfor==="ga" && option.descript==="-"}
+        {#if username=="ga"}
+          {#each options_call as option}
             <option value={option.id}>{option.descript}</option>
-          {:else}
+          {/each}
+        {:else}
+          {options_call = options_call.filter((x) => x.inst != "Announcement")}
+          {#each options_call as option}
             <option value={option.id}>{option.descript}</option>
-          {/if}
-        {/each}
+          {/each}
+        {/if}
       </select>
     </div>
     {#if selected_call == 9}
