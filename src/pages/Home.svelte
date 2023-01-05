@@ -150,7 +150,7 @@
       voices = `Mohon Perhatian, ${calfor}. Terima Kasih.`;
     }
     console.log(voices);
-    // handleSave(0);
+    handleSave(0);
   }
 </script>
 
